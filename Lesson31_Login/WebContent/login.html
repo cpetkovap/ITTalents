@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LogIn Page</title>
+</head>
+<body>
+<h1>Login</h1>
+<form action="Login" method = "post">
+<table>
+<tr>
+<td><label for="username" >Username : </label></td>
+<td><input type  = "text" id = "username" name = "username"/></td>
+</tr>
+<tr>
+<td><label for = "password">Password : </label></td>
+<td><input type  = "password" id = "password" name = "password"/></td>
+</tr>
+<tr>
+<td><input type = "submit" value = "LogIn" onclick="return chech()"/></td>
+</tr>
+</table>
+</form>
+<script type = "text/javascript">
+	function chech(){
+		if(document.getElementById("username").value == ""){
+			alert("Empty username");
+			return false;
+		}
+		if(document.getElementById("password").value == ""){
+			alert("Empty password");
+			return false;
+		}
+		
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+</head>
+<body>
+<h1>Registration</h1>
+<form action="Registration" method = "post">
+<table>
+<tr>
+<td><label for="username" >Username : </label></td>
+<td><input type  = "text" id = "username" name = "username"/></td>
+</tr>
+<tr>
+<td><label for = "password">Password : </label></td>
+<td><input type  = "password" id = "password" name = "password"/></td>
+</tr>
+<tr>
+<td><label for = "password1">Repeat password : </label></td>
+<td><input type  = "password" id = "password1" name = "password1"/></td>
+</tr>
+<tr>
+<td><input type = "submit" value = "Registration" onclick="return chech()"/></td>
+</tr>
+</table>
+</form>
+<script type = "text/javascript">
+	function chech(){
+		if(document.getElementById("username").value == ""){
+			alert("Empty username");
+			return false;
+		}
+		if(document.getElementById("password").value == ""){
+			alert("Empty password");
+			return false;
+		}
+		if(document.getElementById("password1").value == ""){
+			alert("Empty password2");
+			return false;
+		}
+		if(document.getElementById("password").value !== document.getElementById("password1").value){
+			alert("Diffrent password");
+			return false;
+		}
+		
+	}
+</script>
+</body>
+</html>
