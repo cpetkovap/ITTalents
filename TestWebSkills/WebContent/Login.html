@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="jquery-2.1.4.min.js" type="text/javascript"></script>
+<script type = "text/javascript">
+
+	function send() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("pass").value;
+			$.post( "Login", JSON.stringify({ name : username , pass: password }), 
+					function(data){
+						if(data == "success login"){
+							window.location = "http://localhost:8080/TestWebSkills/Home.jsp"
+						}
+			} );	
+	}
+</script>
+</head>
+<body>
+<h1>Login : </h1>
+<table>
+<tr>
+<td>Username : </td>
+<td><input type = "text" name = "username" id = "username" onblur="check()"/></td>
+<td><label id = "showExist" style="color: Red;"></label></td>
+</tr>
+<tr>
+<td>Password : </td>
+<td><input type = "password" name = "pass" id = "pass"/></td>
+</tr>
+<tr>
+<td><button onclick="send()" name = "button" id = "button">Login</button></td>
+<td>
+<form action="Register.html" method="get">
+<button onclick="submit"  name = "buttonReg" id = "buttonReg">Register</button>
+</form>
+</td>
+</tr>
+</table>
+</body>
+</html>
