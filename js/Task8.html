@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task8</title>
+</head>
+<body>
+<table style = "border: 2px solid black" id = "table1">
+<tr>
+<td>aaaaaaaa</td>
+<td>bbbbbbbb</td>
+</tr>
+<tr>
+<td>ccc</td>
+<td>ddd</td>
+</tr>
+</table>
+<br />
+<button onclick = "addRow()">Add Row</button>
+<script type = "text/javascript">
+    var count = 1;
+    function addRow() {
+        var row = document.createElement("tr");
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var node1 = document.createTextNode("This is new element " + (count ++));
+        var node2 = document.createTextNode("This is new element " + (count++));
+
+        td1.appendChild(node1);
+        td2.appendChild(node2);
+        
+        row.appendChild(td1);
+        row.appendChild(td2);
+
+        var element = document.getElementById("table1");
+        element.appendChild(row);
+    }
+</script>
+</body>
+</html>

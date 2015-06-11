@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>Task9</title>
+    <style type ="text/css">
+
+    
+   	img
+   	{
+   		margin-left : 25px
+   		}
+</style>
+
+
+</head>
+<body>
+
+
+<img src="1.jpg" alt="img1" id = "1" height="100px" onmouseover = "mouseOver(1)" onmouseout = "mouseOut(1)"/>
+<img src="3.jpg" alt="img3" id = "3" height="100px" onmouseover = "mouseOver(3)" onmouseout = "mouseOut(3)"/>
+<br/>
+<img src="4.jpg" alt="img4" id = "4" height="100px" onmouseover = "mouseOver(4)" onmouseout = "mouseOut(4)"/>
+<img src="5.jpg" alt="img5" id = "5" height="100px" onmouseover = "mouseOver(5)" onmouseout = "mouseOut(5)"/>
+<script type ="text/javascript">
+    function mouseOver(id) {
+        var img1 = document.getElementById(id);
+        img1.src = id + ".jpg";
+        img1.width = "600";
+        img1.height = "600";      
+    }
+    function mouseOut(ids) {
+        var img1 = document.getElementById(ids);
+        img1.src = ids + ".jpg";
+        img1.width = "100";
+        img1.height = "100";
+    }
+</script>
+
+</body>
+</html>

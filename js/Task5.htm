@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test js2</title>
+</head>
+<body>
+
+Radius:<br/>
+<input type = "text" id = "radius" name = "radius"/>
+<br/><br/>
+Volume :<br/>
+<input type = "text" id = "volume" name = "volume"/>
+<br/>
+<br/>
+<button onclick = "calculates()">Calculate</button>
+
+<script type="text/javascript">
+    function calculates() {
+        var r = document.getElementById("radius").value;
+        if(r == ""|| isNaN(r) || r < 0){
+        	alert("Invalid input");
+        	return;
+        	}
+        //document.write(r);
+        var volume = 4 * Math.PI * Math.pow(r, 3) / 3;
+        //document.write(volume);
+        document.getElementById("volume").value = volume;
+        return;
+
+    }
+</script>
+
+</body>
+</html>

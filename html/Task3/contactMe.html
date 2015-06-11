@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+    <title> Contact me</title>
+    <style type ="text/css">
+        table, textarea
+        {
+        	margin-left : 35px;
+        	}
+    </style>
+</head>
+<body>
+<br/>
+<table width = "100%">
+<tr>
+<td><h2><a href = "home.html "> Home </a></h2></td>
+<td><h2><a href = "aboutMe.html "> About me </a></h2></td>
+<td><h2><a href = "gallery.html "> Gallery </a></h2></td>
+<td><h2><a href = "skills.html "> Skills </a></h2></td>
+<td><h2><a href = "contactMe.html "> Contact me </a></h2></td>
+</tr>
+</table>
+<br/>
+<form action = "contactMe.html" method = "post">
+<table >
+<tr>
+<td><label for = "name">Name : </label></td>
+<td><input type = "text" name = "name" /></td>
+</tr>
+<tr>
+<td><label for = "email">Email : </label></td>
+<td><input type = "text" name = "email" /></td>
+</tr>
+<tr>
+<td><label for = "opinion">Opinion : </label></td>
+<td>
+<select name = "opinion" >
+<option value = "like">like</option>
+<option value = "do not like">do not like</option>
+<option value = "no opinion" selected = "selected">no opinion</option>
+</select>
+</td>
+</tr>
+</table>
+<textarea name = "texts" rows = "4" cols = "55"> Enter text here </textarea>
+<br/>
+<table >
+<tr>
+<td><input type = "submit" value = "Send" /></td>
+</tr>
+<//table>
+</form>
+</body>
+</html>

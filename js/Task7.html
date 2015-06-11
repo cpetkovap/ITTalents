@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task7</title>
+</head>
+<body>
+<div id = "div1">
+Convert
+<input type = "text" id = "convertValue" />
+<select id = "from">
+<option id = "op1">kg</option>
+<option id = "Op2">lb</option>
+</select>
+<select id = "to">
+<option id = "Option1">lb</option>
+<option id = "Option2">kg</option>
+</select>
+<button onclick ="return calculate()">Calculate</button>
+<p id = "here"></p>
+</div>
+<script type ="text/javascript">
+    function calculate() {
+        var from = document.getElementById("from").value;
+        var to = document.getElementById("to").value;
+        var convertValue = document.getElementById("convertValue").value;
+        if (isNaN(convertValue) || convertValue < 0) {
+            document.getElementById("here").innerHTML = "Invalid input !";
+            return;
+        } 
+        var result = 0;
+        if (convertValue == "") {
+            alert("no value");
+            return null;
+        }
+        if (from == "kg") {
+            if (to == "kg") {             
+               result = convertValue;
+            
+            }else if(to == "lb"){
+                result = convertValue * 2.20462262;
+            }
+
+        } else if(from == "lb"){
+            if(to == "kg"){
+                result = convertValue / 2.20462262;
+            }else if(to == "lb"){
+                result = convertValue ;
+            }
+
+        }
+        
+        document.getElementById("here").innerHTML = result;
+    }
+</script>
+</body>
+</html>

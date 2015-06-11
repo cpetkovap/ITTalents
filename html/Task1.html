@@ -1,0 +1,246 @@
+<html>
+<head>
+<title> Task1 Tsvetelina Petkova </title>
+</head>
+<body>
+<form action = "addEmployee" method = "post">
+<table>
+<caption style = "text-align: left; font-size : 32px; font-weight : bold; padding-bottom :15px"> Add Employee </caption>
+<tr>
+<td><label for = "firstName"> First name: </label></td>
+<td><input type = "text" name = "firstName" size = "12" value = "John"/></td>
+</tr>
+<tr>
+<td><label for = "lastName"> Last name: </label></td>
+<td><input type = "text" name = "lastName" size = "12" value = "Wayne"/></td>
+</tr>
+<tr>
+<td><label for = "title"> Title: </label></td>
+<td><input type = "text" name = "title" size = "27" value = "Sales Representative"/></td>
+</tr>
+<tr>
+<td><label for = "courtesy"> Title of Courtesy:&nbsp; </label></td>
+<td>
+<input type = "radio" name = "Courtesy" value = "Dr"/> Dr.
+<input type = "radio" name = "Courtesy" value = "Mr" checked = "checked"/> Mr.
+<input type = "radio" name = "Courtesy" value = "Mrs"/> Mrs.
+<input type = "radio" name = "Courtesy" value = "Ms"/> Ms.
+</td>
+</tr>
+<tr>
+<td><label for = "birth"> Birth date: </label></td>
+<td>
+<select name = "birthMonth" >
+<option value = "January">January</option>
+<option value = "February">February</option>
+<option value = "March">March</option>
+<option value = "April">April</option>
+<option value = "May" selected = "selected">May</option>
+<option value = "June">June</option>
+<option value = "July">July</option>
+<option value = "August">August</option>
+<option value = "September">September</option>
+<option value = "October">October</option>
+<option value = "November">November</option>
+<option value = "December">December</option>
+</select>
+<select name = "birthDay" >
+<option value = "1">1</option>
+<option value = "2">2</option>
+<option value = "3">3</option>
+<option value = "4">4</option>
+<option value = "5">5</option>
+<option value = "6">6</option>
+<option value = "7">7</option>
+<option value = "8">8</option>
+<option value = "9">9</option>
+<option value = "10">10</option>
+<option value = "11">11</option>
+<option value = "12">12</option>
+<option value = "13">13</option>
+<option value = "14">14</option>
+<option value = "15">15</option>
+<option value = "16">16</option>
+<option value = "17">17</option>
+<option value = "18">18</option>
+<option value = "19">19</option>
+<option value = "20">20</option>
+<option value = "21">21</option>
+<option value = "22">22</option>
+<option value = "23">23</option>
+<option value = "24">24</option>
+<option value = "25">25</option>
+<option value = "26">26</option>
+<option value = "27" selected = "selected">27</option>
+<option value = "28">28</option>
+<option value = "29">29</option>
+<option value = "30">30</option>
+<option value = "31">31</option>
+</select>
+<select name = "birthYead">
+<option value = "1900">1900</option>
+<option value = "1901">1901</option>
+<option value = "1902">1902</option>
+<option value = "1903">1903</option>
+<option value = "1904">1904</option>
+<option value = "1905">1905</option>
+<option value = "1906">1906</option>
+<option value = "1907" selected = "selected">1907</option>
+<option value = "1908">1908</option>
+<option value = "1909">1909</option>
+<option value = "1910">1910</option>
+<option value = "1911">1911</option>
+<option value = "1912">1912</option>
+<option value = "1913">1913</option>
+<option value = "1914">1914</option>
+<option value = "1915">1915</option>
+<option value = "1916">1916</option>
+<option value = "1917">1917</option>
+<option value = "1918">1918</option>
+<option value = "1919">1919</option>
+<option value = "1920">1920</option>
+<option value = "1921">1921</option>
+<option value = "1922">1922</option>
+<option value = "1923">1923</option>
+<option value = "1924">1924</option>
+<option value = "1925">1925</option>
+<option value = "1926">1926</option>
+<option value = "1927">1927</option>
+<option value = "1928">1928</option>
+<option value = "1929">1929</option>
+<option value = "1930">1930</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for = "birth"> Hire date: </label></td>
+<td>
+<select name = "birthMonth">
+<option value = "January" selected = "selected">January</option>
+<option value = "February">February</option>
+<option value = "March">March</option>
+<option value = "April">April</option>
+<option value = "May">May</option>
+<option value = "June">June</option>
+<option value = "July">July</option>
+<option value = "August">August</option>
+<option value = "September">September</option>
+<option value = "October">October</option>
+<option value = "November">November</option>
+<option value = "December">December</option>
+</select>
+<select name = "birthDay" >
+<option value = "1">1</option>
+<option value = "2">2</option>
+<option value = "3">3</option>
+<option value = "4">4</option>
+<option value = "5">5</option>
+<option value = "6">6</option>
+<option value = "7">7</option>
+<option value = "8">8</option>
+<option value = "9">9</option>
+<option value = "10" selected = "selected">10</option>
+<option value = "11">11</option>
+<option value = "12">12</option>
+<option value = "13">13</option>
+<option value = "14">14</option>
+<option value = "15">15</option>
+<option value = "16">16</option>
+<option value = "17">17</option>
+<option value = "18">18</option>
+<option value = "19">19</option>
+<option value = "20">20</option>
+<option value = "21">21</option>
+<option value = "22">22</option>
+<option value = "23">23</option>
+<option value = "24">24</option>
+<option value = "25">25</option>
+<option value = "26">26</option>
+<option value = "27">27</option>
+<option value = "28">28</option>
+<option value = "29">29</option>
+<option value = "30">30</option>
+<option value = "31">31</option>
+</select>
+<select name = "birthYead">
+<option value = "2000">2000</option>
+<option value = "2001">2001</option>
+<option value = "2002">2002</option>
+<option value = "2003">2003</option>
+<option value = "2004">2004</option>
+<option value = "2005" selected = "selected">2005</option>
+<option value = "2006">2006</option>
+<option value = "2007">2007</option>
+<option value = "2008">2008</option>
+<option value = "2009">2009</option>
+<option value = "1910">2010</option>
+<option value = "1911">2011</option>
+<option value = "1912">2012</option>
+<option value = "1913">2013</option>
+<option value = "1914">2014</option>
+<option value = "1915">2015</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for = "address" > Address: </label></td>
+<td><input type = "text" name = "address" size = "35" value = "1 Cowboy Lane"/></td>
+</tr>
+<tr>
+<td><label for = "city"> City: </label></td>
+<td><input type = "text" name = "city" size = "27" value = "Winterset"/></td>
+</tr>
+<tr>
+<td><label for = "region"> region: </label></td>
+<td><input type = "text" name = "region" size = "3" value = "IA"/></td>
+</tr>
+<tr>
+<td><label for = "postalCode"> Postal Code: </label></td>
+<td><input type = "text" name = "postalCode" size = "10" value = "50273"/></td>
+</tr>
+<tr>
+<td><label for = "Country"> Country: </label></td>
+<td><input type = "text" name = "Country" size = "6" value = "USA"/></td>
+</tr>
+<tr>
+<td><label for = "HomePhone"> Home Phone: </label></td>
+<td><input type = "text" name = "HomePhone" size = "13" value = "515-555-1212"/></td>
+</tr>
+<tr>
+<td><label for = "Extension"> Extension: </label></td>
+<td><input type = "text" name = "Extension" size = "6" value = "USA"/></td>
+</tr>
+<tr>
+<td colspan = "2"><label for = "notes"> Notes: </label></td>
+</tr>
+<tr>
+<td colspan = "2">
+<textarea name = "textNote" rows = "3" cols = "52">Before joining NorthWind, John dabbled in acting in Western movies.</textarea>
+</td>
+</tr>
+<tr>
+<td><label for = "manager"> Manager: </label></td>
+<td>
+<select name = "manager">
+<option value = "Andrew Fuller">Andrew Fuller</option>
+<option value = "John Doll">John Doll</option>
+<option value = "Matthew Crenshaw">Matthew Crenshaw</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for = "pass1"> Password: </label></td>
+<td><input type = "password" name = "pass1" size = "8" value = "123456" /></td>
+</tr>
+<tr>
+<td><label for = "pass2"> Repeat Password: </label></td>
+<td><input type = "password" name = "pass2" size = "8" value = "123456" /></td>
+</tr>
+<tr>
+<td><input type = "submit" style = "width: 112px" value = "Add Employee" /></td>
+<td> &nbsp; </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

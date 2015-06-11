@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Task01</title>
+</head>
+<body>
+	<h1>Convert</h1>
+	<form action="Task01" method="get">
+		<input type="text" name="value1" id="value1" /> <select
+			name="metricFrom" id="metricFrom"
+			onchange='hideMetric("metricFrom","metricTo" )'>
+			<option value="meter">meter</option>
+			<option value="centimeter" style="visibility: hidden;">
+				centimeter</option>
+			<option value="kilometer">kilometer</option>
+			<option value="foot">foot</option>
+			<option value="inch">inch</option>
+			<option value="yard">yard</option>
+			<option value="mile">mile</option>
+		</select>
+		<script type="text/javascript">
+			function hideMetric(a, b) {
+				var dropdpownValue = document.getElementById(a);
+				var dropdpownValue2 = document.getElementById(b);
+				//alert(dropdpownValue);
+
+				/* if(dropdpownValue.value == document.getElementById("metricTo").value){
+					alert("You can choose another option");
+					return
+				} */
+				for (var i = 0; i < dropdpownValue2.length; i++)
+					if (dropdpownValue[dropdpownValue.selectedIndex].value == dropdpownValue2.options[i].value) {
+						dropdpownValue2.options[i].style.visibility = "hidden";
+					} else {
+						dropdpownValue2.options[i].style.visibility = "";
+					}
+
+			}
+		</script>
+		<select name="metricTo" id="metricTo"
+			onchange='hideMetric("metricTo","metricFrom" )'>
+			<option value="centimeter">centimeter</option>
+			<option value="meter" style="visibility: hidden;">meter</option>
+			<option value="kilometer">kilometer</option>
+			<option value="foot">foot</option>
+			<option value="inch">inch</option>
+			<option value="yard">yard</option>
+			<option value="mile">mile</option>
+		</select> <br />
+		<br /> <input type="submit" value="Convert" />
+	</form>
+
+</body>
+</html>

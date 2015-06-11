@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Task02</title>
+</head>
+<body>
+	<h1>Address</h1>
+	<form method="get" action="Task02_02">
+		<table>
+			<tr>
+				<td><label for="country">Country : </label> <input type="text"
+					id="country" name="country" /></td>
+			</tr>
+			<tr>
+				<td><label for="town">Town : </label> <input type="text"
+					id="town" name="town" /></td>
+			</tr>
+			<tr>
+				<td><label for="street">Street :</label> <input type="text"
+					id="street" name="street" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="act" value="AddUniversity"
+					onclick="return validate()" /></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function validate() {
+			if (document.getElementById("country").value == "") {
+				alert("Add country");
+				return false;
+			}
+
+			if (document.getElementById("town").value == "") {
+				alert("Add town");
+				return false;
+			}
+
+			if (document.getElementById("street").value == "") {
+				alert("Add street");
+				return false;
+			}
+
+		}
+	</script>
+</body>
+</html>

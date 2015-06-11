@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task10</title>
+    <style type ="text/css">
+        .invalidInput { 
+              border: 2px solid red;
+        }
+        .invalidLabels { 
+              color : Red;
+        }
+        .invalidInputPass { 
+              border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<table>
+<tr><td>
+<label for = "name"> Name </label>
+<input type = "text" name = "name" id = "name" onkeyup = "checkEmpty(id)" />
+<label id = "invalidname" class = "invalidLabels"></label>
+</td></tr>
+<tr><td>
+<label for = "pass"> Password </label>
+<input type = "text" name = "pass" id = "pass" onkeyup = "checkEmpty(id)"/>
+<label id = "invalidpass" class = "invalidLabels"></label>
+</td></tr>
+<tr><td>
+<label for = "pass1">Repeat password </label>
+<input type = "text" name = "pass1" id = "pass1" onkeyup = "checkEmpty(id)"/>
+<label id = "invalidpass1" class = "invalidLabels"></label>
+</td></tr>
+<tr><td>
+<label for = "courtesy"> Title of Courtesy:&nbsp; </label>
+<input type = "radio" name = "Courtesy" value = "Dr"/> Dr.
+<input type = "radio" name = "Courtesy" value = "Mr" checked = "checked"/> Mr.
+<input type = "radio" name = "Courtesy" value = "Mrs"/> Mrs.
+<input type = "radio" name = "Courtesy" value = "Ms"/> Ms.
+</td></tr>
+<tr><td id = "counrtyInfo">
+<label for = "Country"> Country: </label>
+<select name = "Country" id = "countryA" onchange="checkCountry();">
+<option value = "Albania">Albania</option>
+<option value = "Bulgaria">Bulgaria</option>
+<option value = "China">China</option>
+<option value = "Egypt">Egypt</option>
+<option value = "Monaco">Monaco</option>
+<option value = "other" >other</option>
+</select>
+<input type = "text" id = "newCountry" disabled ="disabled" onkeydown ="addValue(event)" />
+<label id = "invalidnewCountry" class = "invalidLabels" ></label>
+</td></tr>
+<tr><td>
+<button onclick = "check()">Check password</button>
+</td></tr>
+</table>
+
+<script type ="text/javascript">
+
+    checkEmpty("name");
+    checkEmpty("pass");
+    checkEmpty("pass1");
+    checkPass();
+    function check() {    
+        checkPass();          
+    }
+
+    function checkEmpty(id) {
+        var element = document.getElementById(id);
+        if (element.value == "") {
+            document.getElementById("invalid" + id).innerHTML = "empty";
+            document.getElementById(id).setAttribute("class", "invalidInput");
+
+        } else {
+            document.getElementById("invalid" + id).innerHTML = "";
+            document.getElementById(id).setAttribute("class", "validInput");
+        }
+
+    }
+
+    function checkPass() {
+        pass = document.getElementById("pass").value;
+        pass1 = document.getElementById("pass1").value;
+        if (document.getElementById("invalidpass").innerHTML !== "empty" && document.getElementById("invalidpass1").innerHTML !== "empty" && pass != pass1) {
+            if (pass != pass1) {
+                alert("Diffrent password");
+                //document.getElementById("pass").setAttribute("class", "invalidInputPass");
+                //document.getElementById("pass1").setAttribute("class", "invalidInputPass");
+                return;
+            } else {
+                //document.getElementById("pass").setAttribute("class", "validInput");
+                //document.getElementById("pass1").setAttribute("class", "validInput");
+            }
+        }
+
+    }
+
+    function checkCountry() {       
+        if (document.getElementById("countryA").value == "other") {
+            alert("Add counrty");           
+            document.getElementById("newCountry").value = "";
+            document.getElementById("newCountry").attributes.removeNamedItem("disabled");                   
+            //return;
+        } else {
+            document.getElementById("newCountry").setAttribute("disabled", "disables");
+            document.getElementById("newCountry").value = "";
+        }
+      
+    }
+    function addValue(e) {
+
+        if (e.keyCode == 13) {
+            if (document.getElementById("newCountry").value == "") {
+                alert("Add sth !");               
+                //document.getElementById("newCountry").setAttribute("disabled", "disables");
+                //document.getElementById("add").setAttribute("disabled", "disables");
+                //return;
+            } else {
+                var opt = document.createElement("option");
+                opt.text = document.getElementById("newCountry").value;
+                opt.value = document.getElementById("newCountry").value;
+                opt.setAttribute("selected", "selected");
+                document.getElementById("countryA").options.add(opt);
+            }
+        }
+    
+    }
+</script>
+</body>
+</html>
